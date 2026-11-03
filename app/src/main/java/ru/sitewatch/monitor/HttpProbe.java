@@ -30,8 +30,7 @@ public final class HttpProbe {
                 connection.setReadTimeout(20000);
                 connection.setRequestMethod("GET");
                 connection.setRequestProperty("User-Agent",
-                        "Mozilla/5.0 (Linux; Android 13; Mobile) AppleWebKit/537.36 " +
-                        "(KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36");
+                        "SiteWatch/1.6 (+https://github.com/MyTelexGlobal/SiteWatch-android)");
                 connection.setRequestProperty("Accept", "text/html,*/*;q=0.8");
                 connection.setUseCaches(false);
                 int code = connection.getResponseCode();

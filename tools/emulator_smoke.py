@@ -299,6 +299,26 @@ def run(args):
         device.wait(contains="Всего: 6")
         device.screenshot("03-final-installed-release")
         passed("restart_persistence_and_site_removal")
+        package_info = device.shell("dumpsys", "package", PACKAGE)
+        if "targetSdk=36" in package_info:
+            # Verify usable system-bar clearance, not just a successful launch.
+            tree = device.tree()
+            root = next(n for n in tree.iter() if n.get("resource-id") == PACKAGE + ":id/rootLayout")
+            rb = list(map(int, re.findall(r"\d+", root.get("bounds"))))
+            settings = device.find(resource=PACKAGE + ":id/settingsButton")
+            add = device.find(resource=PACKAGE + ":id/addButton")
+            sb = list(map(int, re.findall(r"\d+", settings.get("bounds"))))
+            ab = list(map(int, re.findall(r"\d+", add.get("bounds"))))
+            assert sb[1] > rb[1] and ab[3] < rb[3], "Controls overlap system-bar edges"
+            passed("api36_system_bar_controls_have_safe_insets")
+            device.settings()
+            device.tap(text="Политика конфиденциальности")
+            device.wait(contains="Дата обновления: 3 ноября 2026 года")
+            assert device.find(contains="ru.sitewatch.monitor") is not None
+            device.screenshot("04-privacy-policy")
+            device.tap(text="Закрыть")
+            device.tap(text="Готово")
+            passed("privacy_policy_accessible_in_app")
         crash = device.shell("logcat", "-d", "-v", "brief", "-s", "AndroidRuntime:E")
         assert "Process: " + PACKAGE not in crash, "App crash found in logcat"
         report["result"] = "PASS"

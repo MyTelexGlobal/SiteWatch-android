@@ -8,6 +8,8 @@ app/build/
 *.jks
 *.keystore
 *.apk
+*.aab
+*.apks
 **/.gradle/
 **/build/
 SiteWatch-Android-v1.4/

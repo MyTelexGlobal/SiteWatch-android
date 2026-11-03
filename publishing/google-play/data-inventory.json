@@ -1,0 +1,31 @@
+{
+  "status": "draft_not_submitted_to_google",
+  "app_id": "ru.sitewatch.monitor",
+  "version": "1.6",
+  "local_storage": [
+    "full user-entered URLs",
+    "last status, HTTP code, check time and latency",
+    "interval, notifications and HTTP consent settings"
+  ],
+  "network_recipients": [
+    "user-selected site and permitted redirects",
+    "device/network DNS provider"
+  ],
+  "network_data": [
+    "request path and query",
+    "connection source IP visible to destination",
+    "fixed SiteWatch User-Agent"
+  ],
+  "developer_backend": false,
+  "ads": false,
+  "analytics_sdk": false,
+  "accounts": false,
+  "encryption_always": false,
+  "reason": "HTTP can be explicitly enabled; do not claim all transmissions encrypted",
+  "collection_form_review": "Conservatively disclose user-supplied website URLs as collected for app functionality. No telemetry to developer. Final mapping requires the live Console form; do not submit a blanket no-data-collected answer.",
+  "sharing_form_review": "Evaluate the user-initiated transfer exception separately from collection. Adding a monitored site explicitly discloses ongoing requests to that site.",
+  "ephemeral_claim": false,
+  "ephemeral_reason": "Remote server log retention is outside app control",
+  "deletion": "Remove a site in the app or clear app storage. Cannot erase already-sent requests or remote website logs.",
+  "source": "https://support.google.com/googleplay/android-developer/answer/10787469"
+}

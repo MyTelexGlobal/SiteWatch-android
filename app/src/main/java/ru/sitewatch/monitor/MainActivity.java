@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.ScrollView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,6 +67,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        applySystemInsets();
 
         listContainer = findViewById(R.id.siteList);
         summary = findViewById(R.id.summary);
@@ -94,6 +96,28 @@ public class MainActivity extends Activity {
         super.onResume();
         handler.removeCallbacks(ticker);
         handler.post(ticker);
+    }
+
+    private void applySystemInsets() {
+        // Android 15+ draws API 35+ apps behind system bars. Keep controls clear
+        // of bars, display cutouts, and the keyboard without opting out.
+        if (Build.VERSION.SDK_INT < 35) return;
+        android.view.WindowInsetsController controller = getWindow().getInsetsController();
+        if (controller != null) {
+            int lightBars = android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+                    | android.view.WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS;
+            controller.setSystemBarsAppearance(lightBars, lightBars);
+        }
+        View root = findViewById(R.id.rootLayout);
+        root.setOnApplyWindowInsetsListener((view, insets) -> {
+            android.graphics.Insets safe = insets.getInsets(
+                    android.view.WindowInsets.Type.systemBars()
+                            | android.view.WindowInsets.Type.displayCutout()
+                            | android.view.WindowInsets.Type.ime());
+            view.setPadding(safe.left, safe.top, safe.right, safe.bottom);
+            return insets;
+        });
+        root.requestApplyInsets();
     }
 
     @Override protected void onPause() {
@@ -213,15 +237,50 @@ public class MainActivity extends Activity {
                     .show();
         });
 
+        Button privacyButton = new Button(this);
+        privacyButton.setText("Политика конфиденциальности");
+        privacyButton.setAllCaps(false);
+        privacyButton.setOnClickListener(v -> showPrivacyPolicy());
+        container.addView(privacyButton);
+
+        ScrollView settingsScroll = new ScrollView(this);
+        settingsScroll.addView(container);
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Настройки")
-                .setView(container)
+                .setView(settingsScroll)
                 .setPositiveButton("Готово", null)
                 .create();
         dialog.setOnDismissListener(ignored -> {
             if (settingsNotifySwitch == toggle) settingsNotifySwitch = null;
         });
         dialog.show();
+    }
+
+    private void showPrivacyPolicy() {
+        String policy;
+        try (java.io.InputStream stream = getResources().openRawResource(R.raw.privacy_policy)) {
+            java.io.ByteArrayOutputStream bytes = new java.io.ByteArrayOutputStream();
+            byte[] buffer = new byte[4096];
+            int count;
+            while ((count = stream.read(buffer)) != -1) bytes.write(buffer, 0, count);
+            policy = bytes.toString("UTF-8");
+        } catch (java.io.IOException e) {
+            Toast.makeText(this, "Не удалось открыть текст политики", Toast.LENGTH_LONG).show();
+            return;
+        }
+        TextView text = new TextView(this);
+        text.setText(policy);
+        text.setTextSize(15);
+        text.setTextColor(Color.parseColor("#1D2C48"));
+        text.setTextIsSelectable(true);
+        text.setPadding(dp(22), dp(8), dp(22), dp(16));
+        ScrollView scroll = new ScrollView(this);
+        scroll.addView(text);
+        new AlertDialog.Builder(this)
+                .setTitle("Политика конфиденциальности")
+                .setView(scroll)
+                .setPositiveButton("Закрыть", null)
+                .show();
     }
 
     private void updateIntervalHint(TextView hint) {
@@ -282,7 +341,10 @@ public class MainActivity extends Activity {
 
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Добавить сайт")
-                .setMessage("Укажите адрес сайта. Можно просто example.com")
+                .setMessage("Можно указать example.com. После добавления приложение будет " +
+                        "отправлять GET-запросы по этому адресу и перенаправлениям, в том числе " +
+                        "в фоне. Сервер увидит ваш IP-адрес, путь и параметры запроса. " +
+                        "Не указывайте пароли и секретные ссылки.")
                 .setView(box)
                 .setNegativeButton("Отмена", null)
                 .setPositiveButton("Добавить", null)
