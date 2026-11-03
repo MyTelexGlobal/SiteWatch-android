@@ -175,6 +175,7 @@ def run(args):
     base = "http://10.0.2.2:" + str(args.port)
     urls = [base + suffix for suffix in ("/up", "/down", "/switch?token=" + SECRET,
                                         "/redirect", "/loop", "/credentials")]
+    restore_clock = None
     try:
         assert args.reset_test_app, "Explicit --reset-test-app is required on this disposable emulator"
         device.adb("uninstall", PACKAGE, check=False)
@@ -246,24 +247,45 @@ def run(args):
         passed("public_https_with_system_certificate_validation")
 
         device.shell("input", "keyevent", "3")
-        started = time.monotonic()
-        while time.monotonic() - started < 65:
-            time.sleep(0.5)
+        time.sleep(5)  # Let already-authorized foreground requests finish.
         before = len(requests)
+        if args.advance_emulator_clock:
+            auto_time = device.shell("settings", "get", "global", "auto_time").strip()
+            clock_offset = int(device.shell("date", "+%s").strip()) - int(time.time())
+            was_root = device.shell("id", "-u").strip() == "0"
+            device.adb("root")
+            device.adb("wait-for-device")
+            assert device.shell("id", "-u").strip() == "0", "A rootable emulator is required for clock simulation"
+            restore_clock = (auto_time, clock_offset, was_root)
+            device.shell("settings", "put", "global", "auto_time", "0")
+            device.shell("date", "-s", "@" + str(int(time.time()) + clock_offset + 16 * 60))
+        else:
+            # Observe the actual periodic run without modifying the guest clock.
+            deadline = time.monotonic() + 16 * 60
+            while time.monotonic() < deadline and len(requests) == before:
+                time.sleep(0.5)
         jobs = device.shell("dumpsys", "jobscheduler")
         candidates = []
-        for chunk in re.split(r"(?=JOB #)", jobs):
-            if PACKAGE + "/androidx.work" in chunk:
-                match = re.match(r"JOB #[^\s/]+/(\d+):", chunk)
-                if match:
-                    candidates.append(match.group(1))
+        for match in re.finditer(r"^\s*JOB\s+(\S+)/(\d+):[^\n]*" +
+                                 re.escape(PACKAGE + "/androidx.work"), jobs, re.MULTILINE):
+            identifier = match.group(1).lstrip("#")
+            namespace = identifier.rsplit(":", 1)[0] if ":" in identifier else None
+            candidates.append((namespace, match.group(2)))
         assert candidates, "WorkManager job is not scheduled"
-        device.shell("cmd", "jobscheduler", "run", "-f", PACKAGE, candidates[0])
+        namespace, job_id = candidates[0]
+        command = ["cmd", "jobscheduler", "run", "-f"]
+        if namespace:
+            command += ["-n", namespace]
+        forced = len(requests) == before
+        if forced:
+            device.shell(*(command + [PACKAGE, job_id]))
         deadline = time.monotonic() + 25
         while time.monotonic() < deadline and len(requests) == before:
             time.sleep(0.5)
         assert len(requests) > before, "Forced background worker made no request"
-        passed("background_workmanager_job_runs_with_activity_hidden", job_id=candidates[0])
+        passed("background_workmanager_job_runs_with_activity_hidden", job_id=job_id,
+               namespace=namespace, forced=forced,
+               guest_clock_advance_seconds=960 if args.advance_emulator_clock else 0)
 
         device.shell("am", "force-stop", PACKAGE)
         device.shell("am", "start", "-n", PACKAGE + "/.MainActivity")
@@ -290,6 +312,13 @@ def run(args):
             pass
         raise
     finally:
+        if restore_clock:
+            auto_time, clock_offset, was_root = restore_clock
+            device.shell("date", "-s", "@" + str(int(time.time()) + clock_offset))
+            device.shell("settings", "put", "global", "auto_time", auto_time)
+            if not was_root:
+                device.adb("unroot")
+                device.adb("wait-for-device")
         server.shutdown()
         (output / "results.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
 
@@ -303,4 +332,6 @@ if __name__ == "__main__":
     parser.add_argument("--port", type=int, default=0)
     parser.add_argument("--output", type=Path, default=Path("test-results/emulator"))
     parser.add_argument("--reset-test-app", action="store_true")
+    parser.add_argument("--advance-emulator-clock", action="store_true",
+                        help="Simulate the period by changing only a rootable emulator's clock; restored afterwards")
     run(parser.parse_args())

@@ -1,0 +1,1970 @@
+{
+  "packages": [
+    {
+      "name": "androidx.annotation:annotation-experimental",
+      "version": "1.4.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.annotation:annotation-jvm",
+      "version": "1.6.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.annotation:annotation-jvm",
+      "version": "1.9.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.arch.core:core-common",
+      "version": "2.2.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.arch.core:core-runtime",
+      "version": "2.1.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.arch.core:core-runtime",
+      "version": "2.2.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.collection:collection",
+      "version": "1.0.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.collection:collection-jvm",
+      "version": "1.4.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.concurrent:concurrent-futures",
+      "version": "1.1.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.concurrent:concurrent-futures-ktx",
+      "version": "1.1.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.core:core",
+      "version": "1.12.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.databinding:databinding-common",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.databinding:databinding-compiler-common",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.interpolator:interpolator",
+      "version": "1.0.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.lifecycle:lifecycle-common",
+      "version": "2.6.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.lifecycle:lifecycle-livedata",
+      "version": "2.6.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.lifecycle:lifecycle-livedata-core",
+      "version": "2.6.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.lifecycle:lifecycle-runtime",
+      "version": "2.6.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.lifecycle:lifecycle-service",
+      "version": "2.6.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.profileinstaller:profileinstaller",
+      "version": "1.3.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.room:room-common-jvm",
+      "version": "2.7.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.room:room-runtime-android",
+      "version": "2.7.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.sqlite:sqlite-android",
+      "version": "2.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.sqlite:sqlite-framework-android",
+      "version": "2.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.startup:startup-runtime",
+      "version": "1.1.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.tracing:tracing",
+      "version": "1.2.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.tracing:tracing-ktx",
+      "version": "1.2.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.versionedparcelable:versionedparcelable",
+      "version": "1.1.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "androidx.work:work-runtime",
+      "version": "2.11.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.amazonaws:aws-java-sdk-core",
+      "version": "1.12.780",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.amazonaws:aws-java-sdk-kms",
+      "version": "1.12.780",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.amazonaws:aws-java-sdk-s3",
+      "version": "1.12.780",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.amazonaws:aws-java-sdk-sts",
+      "version": "1.12.780",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.amazonaws:jmespath-java",
+      "version": "1.12.780",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.android.databinding:baseLibrary",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.analytics-library:crash",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.analytics-library:protos",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.analytics-library:shared",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.analytics-library:tracker",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.androidtest:android-test-engine",
+      "version": "1.0.8",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.androidtest:android-test-engine-result-listener",
+      "version": "1.0.8",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.androidtest:test-result-event-proto",
+      "version": "1.0.8",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.androidtest:test-result-proto",
+      "version": "1.0.8",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build.jetifier:jetifier-core",
+      "version": "1.0.0-beta10",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build.jetifier:jetifier-processor",
+      "version": "1.0.0-beta10",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:aapt2",
+      "version": "9.5.0-16666295",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:aapt2-proto",
+      "version": "9.5.0-16666295",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:aaptcompiler",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:apksig",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:apkzlib",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:builder",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:builder-model",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:builder-test-api",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:bundletool",
+      "version": "1.18.3",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:gradle",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:gradle-api",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:gradle-common-api",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:gradle-settings-api",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.build:manifest-merger",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.ddms:ddmlib",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.external.com-intellij:intellij-core",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.external.com-intellij:kotlin-compiler",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.external.org-jetbrains:uast",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.layoutlib:layoutlib-api",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.lint:lint",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.lint:lint-api",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.lint:lint-checks",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.lint:lint-gradle",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.lint:lint-model",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.lint:lint-typedef-remover",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.utp:gradle-work-action",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools.utp:gradle-work-action-api",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools:annotations",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools:common",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools:dvlib",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools:play-sdk-proto",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools:repository",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools:sdk-common",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android.tools:sdklib",
+      "version": "32.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android:signflinger",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.android:zipflinger",
+      "version": "9.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.esotericsoftware.kryo:kryo",
+      "version": "2.24.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.esotericsoftware.minlog:minlog",
+      "version": "1.2",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.esotericsoftware.reflectasm:reflectasm",
+      "version": "1.09",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.fasterxml.jackson.core:jackson-annotations",
+      "version": "2.22",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.22.3",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.22.3",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8",
+      "version": "2.22.3",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+      "version": "2.22.3",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.github.javaparser:javaparser-core",
+      "version": "3.27.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.github.jnr:jnr-constants",
+      "version": "0.10.4",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.github.mwiede:jsch",
+      "version": "0.2.16",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.google.api-client:google-api-client",
+      "version": "1.34.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.google.apis:google-api-services-storage",
+      "version": "v1-rev20220705-1.32.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.google.auto.value:auto-value-annotations",
+      "version": "1.6.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.code.findbugs:jsr305",
+      "version": "3.0.2",
+      "sources": [
+        "gradle-bundled",
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.code.gson:gson",
+      "version": "2.11.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.code.gson:gson",
+      "version": "2.13.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.google.crypto.tink:tink",
+      "version": "1.7.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.dagger:dagger",
+      "version": "2.28.3",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.errorprone:error_prone_annotations",
+      "version": "2.50.0",
+      "sources": [
+        "gradle-bundled",
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.flatbuffers:flatbuffers-java",
+      "version": "1.12.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.guava:failureaccess",
+      "version": "1.0.3",
+      "sources": [
+        "gradle-bundled",
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.guava:guava",
+      "version": "33.7.2-jre",
+      "sources": [
+        "gradle-bundled",
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.guava:listenablefuture",
+      "version": "1.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.guava:listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.http-client:google-http-client",
+      "version": "1.42.2",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.google.http-client:google-http-client-apache-v2",
+      "version": "1.42.2",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.google.http-client:google-http-client-gson",
+      "version": "1.42.2",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.google.j2objc:j2objc-annotations",
+      "version": "3.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.jimfs:jimfs",
+      "version": "1.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.oauth-client:google-oauth-client",
+      "version": "1.34.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.google.protobuf:protobuf-java",
+      "version": "3.25.5",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.google.protobuf:protobuf-java-util",
+      "version": "3.25.5",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.googlecode.jatl:jatl",
+      "version": "0.2.3",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.googlecode.juniversalchardet:juniversalchardet",
+      "version": "1.0.3",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.googlecode.plist:dd-plist",
+      "version": "1.27",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "com.squareup:javapoet",
+      "version": "1.13.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.squareup:javawriter",
+      "version": "2.5.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.sun.istack:istack-commons-runtime",
+      "version": "3.0.8",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.sun.xml.fastinfoset:FastInfoset",
+      "version": "1.2.16",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "com.thoughtworks.qdox:qdox",
+      "version": "1.12.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "commons-codec:commons-codec",
+      "version": "1.17.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "commons-codec:commons-codec",
+      "version": "1.18.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "commons-io:commons-io",
+      "version": "2.16.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "commons-io:commons-io",
+      "version": "2.20.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "commons-logging:commons-logging",
+      "version": "1.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "io.github.java-diff-utils:java-diff-utils",
+      "version": "4.12",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "io.grpc:grpc-context",
+      "version": "1.27.2",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "io.opencensus:opencensus-api",
+      "version": "0.31.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "io.opencensus:opencensus-contrib-http-util",
+      "version": "0.31.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "it.unimi.dsi:fastutil",
+      "version": "8.5.2",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "jakarta.activation:jakarta.activation-api",
+      "version": "1.2.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "jakarta.xml.bind:jakarta.xml.bind-api",
+      "version": "2.3.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "javax.inject:javax.inject",
+      "version": "1",
+      "sources": [
+        "gradle-bundled",
+        "project"
+      ]
+    },
+    {
+      "name": "jcifs:jcifs",
+      "version": "1.3.17",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "joda-time:joda-time",
+      "version": "2.14.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "junit:junit",
+      "version": "4.13.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "net.java.dev.jna:jna",
+      "version": "5.17.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.java.dev.jna:jna",
+      "version": "5.6.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "net.java.dev.jna:jna-platform",
+      "version": "5.17.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.java.dev.jna:jna-platform",
+      "version": "5.6.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-freebsd-amd64-libcpp",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-linux-aarch64",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-linux-aarch64-ncurses5",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-linux-aarch64-ncurses6",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-linux-amd64",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-linux-amd64-ncurses5",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-linux-amd64-ncurses6",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-osx-aarch64",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-osx-amd64",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-windows-aarch64",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-windows-aarch64-min",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-windows-amd64",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-windows-amd64-min",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-windows-i386",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.rubygrapefruit:native-platform-windows-i386-min",
+      "version": "0.22-milestone-29",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "net.sf.jopt-simple:jopt-simple",
+      "version": "4.9",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "net.sf.kxml:kxml2",
+      "version": "2.3.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.antlr:antlr4-runtime",
+      "version": "4.7.2",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.ant:ant",
+      "version": "1.10.17",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.ant:ant-antlr",
+      "version": "1.10.15",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.ant:ant-launcher",
+      "version": "1.10.17",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.commons:commons-compress",
+      "version": "1.27.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.apache.commons:commons-compress",
+      "version": "1.28.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.commons:commons-lang3",
+      "version": "3.20.0",
+      "sources": [
+        "gradle-bundled",
+        "project"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy",
+      "version": "4.0.29",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy-ant",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy-astbuilder",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy-datetime",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy-dateutil",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy-docgenerator",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy-groovydoc",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy-json",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy-nio",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy-templates",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.groovy:groovy-xml",
+      "version": "4.0.33",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.httpcomponents:httpclient",
+      "version": "4.5.14",
+      "sources": [
+        "gradle-bundled",
+        "project"
+      ]
+    },
+    {
+      "name": "org.apache.httpcomponents:httpcore",
+      "version": "4.4.16",
+      "sources": [
+        "gradle-bundled",
+        "project"
+      ]
+    },
+    {
+      "name": "org.apache.httpcomponents:httpmime",
+      "version": "4.5.6",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.apache.ivy:ivy",
+      "version": "2.5.3",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.maven:maven-builder-support",
+      "version": "3.9.5",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.maven:maven-model",
+      "version": "3.9.5",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.maven:maven-repository-metadata",
+      "version": "3.9.5",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.maven:maven-settings",
+      "version": "3.9.5",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.maven:maven-settings-builder",
+      "version": "3.9.5",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.sshd:sshd-osgi",
+      "version": "2.15.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.apache.sshd:sshd-sftp",
+      "version": "2.15.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.bitbucket.b_c:jose4j",
+      "version": "0.9.7",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.bouncycastle:bcpg-jdk18on",
+      "version": "1.85",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.bouncycastle:bcpkix-jdk18on",
+      "version": "1.86",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.bouncycastle:bcprov-jdk18on",
+      "version": "1.85",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.bouncycastle:bcprov-jdk18on",
+      "version": "1.86",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.bouncycastle:bcutil-jdk18on",
+      "version": "1.85",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.bouncycastle:bcutil-jdk18on",
+      "version": "1.86",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.checkerframework:checker-qual",
+      "version": "2.5.8",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.codehaus.plexus:plexus-cipher",
+      "version": "2.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.codehaus.plexus:plexus-interpolation",
+      "version": "1.26",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.codehaus.plexus:plexus-sec-dispatcher",
+      "version": "2.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.codehaus.plexus:plexus-utils",
+      "version": "3.6.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.eclipse.jgit:org.eclipse.jgit",
+      "version": "7.2.1.202505142326-r",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.eclipse.jgit:org.eclipse.jgit.ssh.apache",
+      "version": "7.2.1.202505142326-r",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.eclipse.jgit:org.eclipse.jgit.ssh.apache.agent",
+      "version": "7.2.1.202505142326-r",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.fusesource.jansi:jansi",
+      "version": "2.4.2",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.glassfish.jaxb:jaxb-runtime",
+      "version": "2.3.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.glassfish.jaxb:txw2",
+      "version": "2.3.2",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.gradle.buildtool.internal:configuration-cache-report-jvm",
+      "version": "1.34",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.gradle:gradle-core",
+      "version": "9.8.2",
+      "sources": [
+        "gradle-core"
+      ]
+    },
+    {
+      "name": "org.hamcrest:hamcrest-core",
+      "version": "1.3",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jctools:jctools-core",
+      "version": "4.0.5",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jdom:jdom2",
+      "version": "2.0.6.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:fus-statistics-gradle-plugin",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-assignment-compiler-plugin-embeddable",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-build-statistics",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-build-tools-api",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-build-tools-api",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-build-tools-impl",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-compiler-embeddable",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-compiler-runner",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-daemon-client",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-daemon-embeddable",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-gradle-plugin",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-gradle-plugin-annotations",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-gradle-plugin-api",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-gradle-plugin-idea",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-gradle-plugin-idea-proto",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-klib-commonizer-api",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-native-utils",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-reflect",
+      "version": "2.2.10",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-reflect",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-sam-with-receiver-compiler-plugin",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-script-runtime",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-scripting-common",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-scripting-jvm",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-scripting-jvm-host",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib",
+      "version": "2.1.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib",
+      "version": "2.2.10",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib",
+      "version": "2.4.10",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
+      "version": "2.2.10",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+      "version": "2.2.10",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-tooling-core",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-util-io",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-util-klib",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-util-klib-metadata",
+      "version": "2.4.20",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-android",
+      "version": "1.9.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
+      "version": "1.10.2",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
+      "version": "1.9.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm",
+      "version": "1.11.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm",
+      "version": "1.11.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jetbrains:annotations",
+      "version": "23.0.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jetbrains:annotations",
+      "version": "24.0.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.jspecify:jspecify",
+      "version": "1.0.0",
+      "sources": [
+        "gradle-bundled",
+        "project"
+      ]
+    },
+    {
+      "name": "org.jspecify:jspecify",
+      "version": "1.0.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.junit.platform:junit-platform-commons",
+      "version": "1.13.3",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.junit.platform:junit-platform-engine",
+      "version": "1.13.3",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.junit.platform:junit-platform-launcher",
+      "version": "1.13.3",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.jvnet.staxex:stax-ex",
+      "version": "1.8.1",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.objenesis:objenesis",
+      "version": "2.6",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.opentest4j:opentest4j",
+      "version": "1.3.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.ow2.asm:asm",
+      "version": "9.10.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.ow2.asm:asm",
+      "version": "9.9",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.ow2.asm:asm-analysis",
+      "version": "9.9",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.ow2.asm:asm-commons",
+      "version": "9.10.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.ow2.asm:asm-commons",
+      "version": "9.9",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.ow2.asm:asm-tree",
+      "version": "9.10.1",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.ow2.asm:asm-tree",
+      "version": "9.9",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.ow2.asm:asm-util",
+      "version": "9.9",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.slf4j:jcl-over-slf4j",
+      "version": "2.0.17",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.slf4j:jul-to-slf4j",
+      "version": "2.0.17",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.slf4j:log4j-over-slf4j",
+      "version": "2.0.17",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.slf4j:slf4j-api",
+      "version": "1.7.30",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.slf4j:slf4j-api",
+      "version": "2.0.17",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.tensorflow:tensorflow-lite-metadata",
+      "version": "0.2.0",
+      "sources": [
+        "project"
+      ]
+    },
+    {
+      "name": "org.tomlj:tomlj",
+      "version": "1.0.0",
+      "sources": [
+        "gradle-bundled"
+      ]
+    },
+    {
+      "name": "org.yaml:snakeyaml",
+      "version": "2.6",
+      "sources": [
+        "gradle-bundled"
+      ]
+    }
+  ],
+  "external_gradle_jars": 125,
+  "unmapped_external_jars": [],
+  "osv_checked": true,
+  "matches": []
+}

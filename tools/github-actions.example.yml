@@ -1,3 +1,4 @@
+# Optional GitHub Actions template. Move to .github/workflows/verify.yml to enable.
 name: Verify Android build
 
 on:

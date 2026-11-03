@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-03",
+  "version": "1.5",
+  "version_code": 6,
+  "apk_source_commit": "1f799c552bb2f885e0e6327ae1e1468a7d6fcfd6",
+  "apk_sha256": "bb408ff584f65352b2d1090abd013e2ea5bd1ce023c16b4fb3f92ab9a0f68174",
+  "apk_bytes": 2183415,
+  "certificate_sha256": "d0ec938d2f94601baf545510183ff5769b68c57929cfd16023aa8b0277908537",
+  "unit_tests_passed": 16,
+  "lint": {
+    "debug": {
+      "Warning": 24
+    },
+    "release": {
+      "Warning": 24
+    }
+  },
+  "emulator": {
+    "android": "16",
+    "api": "36",
+    "apk_sha256": "bb408ff584f65352b2d1090abd013e2ea5bd1ce023c16b4fb3f92ab9a0f68174",
+    "checks": [
+      {
+        "name": "baseline_1_3_six_sites_and_http_results",
+        "status": "PASS"
+      },
+      {
+        "name": "upgrade_preserves_six_sites_and_interval_http_default_off",
+        "status": "PASS"
+      },
+      {
+        "name": "http_consent_codes_and_redirect_policy_on_android",
+        "status": "PASS"
+      },
+      {
+        "name": "duplicate_and_credential_urls_rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "recovery_notification_hides_path_and_secret",
+        "status": "PASS"
+      },
+      {
+        "name": "public_https_with_system_certificate_validation",
+        "status": "PASS"
+      },
+      {
+        "name": "background_workmanager_job_runs_with_activity_hidden",
+        "status": "PASS",
+        "job_id": "11",
+        "namespace": "androidx.work.systemjobscheduler",
+        "forced": true,
+        "guest_clock_advance_seconds": 960
+      },
+      {
+        "name": "restart_persistence_and_site_removal",
+        "status": "PASS"
+      },
+      {
+        "name": "no_sitewatch_crash_in_android_runtime_log",
+        "status": "PASS"
+      }
+    ],
+    "result": "PASS"
+  },
+  "guest_clock_restored": true,
+  "wrapper_validation": {
+    "official_wrapper_starts_patched_distribution": true,
+    "wrong_distribution_checksum_rejected": true
+  },
+  "dependency_checksum_tampering_rejected": true,
+  "osv_coordinates_checked": 279,
+  "external_gradle_jars": 125,
+  "unmapped_external_gradle_jars": 0,
+  "osv_matches": 0,
+  "toolchain": {
+    "base_gradle_version": "9.8.2",
+    "patch_revision": "sitewatch.1",
+    "distribution_url": "https://github.com/MyTelexGlobal/SiteWatch-android/releases/download/v1.5.0/gradle-9.8.2-sitewatch.1-bin.zip",
+    "distribution_sha256": "0abdcaf59c04d47b7a30461ad60ff94a2477bda5d9f7df1abf6fdb6e02dc4217",
+    "wrapper_sha256": "3b8a25775a69158b5ad2b1d17a80a88dc7b40a352a73eb27d06c612a7ce68e98"
+  },
+  "github_actions_activated": false,
+  "physical_device_tested": false,
+  "api23_device_tested": false
+}
