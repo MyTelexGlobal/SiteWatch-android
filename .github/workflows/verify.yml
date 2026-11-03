@@ -1,0 +1,55 @@
+name: Verify Android build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Java 17
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Ensure Android SDK components
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Rebuild and verify the patched Gradle distribution
+        run: |
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          lock = json.loads(Path('tools/toolchain.json').read_text())
+          archive = Path('.toolchain-cache/gradle-9.8.2-sitewatch.1-bin.zip')
+          subprocess.run(['python3', 'tools/prepare_gradle.py', '--output', str(archive),
+                          '--expected-sha256', lock['distribution_sha256']], check=True)
+          props = Path('gradle/wrapper/gradle-wrapper.properties')
+          lines = props.read_text().splitlines()
+          props.write_text('\n'.join('distributionUrl=' + archive.resolve().as_uri()
+                           if line.startswith('distributionUrl=') else line
+                           for line in lines) + '\n')
+          PY
+      - name: Build, test, and lint with dependency verification
+        run: ./gradlew --no-daemon --dependency-verification strict testDebugUnitTest assembleDebug assembleRelease lintDebug lintRelease
+      - name: Audit project and bundled Gradle libraries
+        run: python3 tools/security_audit.py --gradle-zip .toolchain-cache/gradle-9.8.2-sitewatch.1-bin.zip --output test-results/security.json
+      - name: Store verification reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: verification-reports
+          path: |
+            test-results/security.json
+            app/build/test-results/
+            app/build/reports/lint-results-*
+          if-no-files-found: warn

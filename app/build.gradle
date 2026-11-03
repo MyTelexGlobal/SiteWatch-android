@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'ru.sitewatch.monitor'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'ru.sitewatch.monitor'
+        minSdk 23
+        targetSdk 34
+        versionCode 6
+        versionName '1.5'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.work:work-runtime:2.11.2'
+    testImplementation 'junit:junit:4.13.2'
+}

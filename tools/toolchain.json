@@ -1,0 +1,7 @@
+{
+  "base_gradle_version": "9.8.2",
+  "patch_revision": "sitewatch.1",
+  "distribution_url": "https://github.com/MyTelexGlobal/SiteWatch-android/releases/download/v1.5.0/gradle-9.8.2-sitewatch.1-bin.zip",
+  "distribution_sha256": "0abdcaf59c04d47b7a30461ad60ff94a2477bda5d9f7df1abf6fdb6e02dc4217",
+  "wrapper_sha256": "3b8a25775a69158b5ad2b1d17a80a88dc7b40a352a73eb27d06c612a7ce68e98"
+}

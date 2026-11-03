@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        exclusiveContent {
+            forRepository { google() }
+            filter {
+                includeGroupByRegex 'com\\.android(\\..*)?'
+                includeGroupByRegex 'androidx(\\..*)?'
+                includeGroup 'com.google.testing.platform'
+            }
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:9.5.0'
+    }
+    def patchedVersions = new Properties()
+    file('gradle/security-versions.properties').withInputStream { patchedVersions.load(it) }
+    configurations.classpath.resolutionStrategy.eachDependency { details ->
+        def key = details.requested.group + '/' + details.requested.name
+        def version = patchedVersions.getProperty(key,
+                patchedVersions.getProperty(details.requested.group + '/*'))
+        if (version != null) details.useVersion(version)
+    }
+}
+
+def patchedVersions = new Properties()
+file('gradle/security-versions.properties').withInputStream { patchedVersions.load(it) }
+allprojects {
+    // Lint also creates detached configurations, which do not inherit the
+    // configuration-container rule below. Update their metadata edges as well.
+    dependencies.components.all { details ->
+        details.allVariants {
+            withDependencies { dependencies ->
+                dependencies.each { dependency ->
+                    def key = dependency.group + '/' + dependency.name
+                    def version = patchedVersions.getProperty(key,
+                            patchedVersions.getProperty(dependency.group + '/*'))
+                    if (version != null) dependency.version { require(version) }
+                }
+            }
+        }
+    }
+    configurations.configureEach {
+        resolutionStrategy.eachDependency { details ->
+            def key = details.requested.group + '/' + details.requested.name
+            def version = patchedVersions.getProperty(key,
+                    patchedVersions.getProperty(details.requested.group + '/*'))
+            if (version != null) details.useVersion(version)
+        }
+    }
+}
