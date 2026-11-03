@@ -1,0 +1,18 @@
+// Run Google's thin bundletool with the already pinned and verified AGP
+// dependencies. The standalone "all" JAR embeds older library versions and
+// is deliberately not used for the release verification.
+gradle.projectsEvaluated {
+    def root = gradle.rootProject
+    root.tasks.register('sitewatchBundletool', JavaExec) {
+        classpath = root.buildscript.configurations.classpath
+        mainClass = 'com.android.tools.build.bundletool.BundleToolMain'
+        doFirst {
+            def argumentFile = root.providers.gradleProperty('bundletoolArgsFile').get()
+            def arguments = new groovy.json.JsonSlurper().parse(root.file(argumentFile))
+            if (!(arguments instanceof List) || arguments.any { !(it instanceof String) }) {
+                throw new GradleException('Bundletool arguments must be a JSON array of strings')
+            }
+            setArgs(arguments)
+        }
+    }
+}

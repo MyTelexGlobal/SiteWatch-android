@@ -1,11 +1,11 @@
-# СайтКонтроль 1.5
+# СайтКонтроль 1.6
 
 Android-приложение для проверки доступности сайтов по HTTP и HTTPS. Оно хранит список адресов и последний результат, проверяет сайты по расписанию и вручную, уведомляет о восстановлении доступности.
 
 **Автор:** Александр Валерьевич Е, [evstun@ya.ru](mailto:evstun@ya.ru).  
 **Ревью кода и вычистка багов:** Yury Myshinskiy.
 
-[Скачать APK версии 1.5](https://github.com/MyTelexGlobal/SiteWatch-android/releases/download/v1.5.0/SiteWatch-v1.5.apk) · [Выпуски](https://github.com/MyTelexGlobal/SiteWatch-android/releases) · [Авторы](AUTHORS.md)
+[Скачать APK версии 1.6](https://github.com/MyTelexGlobal/SiteWatch-android/releases/download/v1.6.0/SiteWatch-v1.6.apk) · [Выпуски](https://github.com/MyTelexGlobal/SiteWatch-android/releases) · [Авторы](AUTHORS.md)
 
 ## Использование
 
@@ -23,11 +23,17 @@ HTTP по умолчанию запрещен. Его можно разреши�
 
 Данные исключены из системного резервного копирования и переноса между устройствами. Уже созданные старой версией копии приложение не удаляет. Полные адреса сохраняются в закрытом хранилище Android без дополнительного шифрования самим приложением. Не помещайте в них секреты без необходимости.
 
-Список сайтов, идентификатор приложения ru.sitewatch.monitor и формат хранения сохранены. При обновлении запрет HTTP немедленно отражается в карточках. Отзыв разрешения HTTP проверяется перед каждым следующим запросом в цепочке перенаправлений.
+Список сайтов, идентификатор приложения ru.sitewatch.monitor и формат хранения сохранены. После перехода с версии без отдельного согласия запрет HTTP немедленно отражается в карточках. Отзыв разрешения HTTP проверяется перед каждым следующим запросом в цепочке перенаправлений.
+
+## Google Play и Play Protect
+
+Публикация в Google Play еще не выполнена: новый личный аккаунт проходит подтверждение. Подготовлены подписанный AAB, материалы магазина и анкеты. [Текущий статус и обязательные шаги](docs/GOOGLE_PLAY.md) · [Политика конфиденциальности](https://mytelexglobal.github.io/SiteWatch-android/privacy.html). Политика также читается без сети в настройках приложения.
+
+На официальном образе Android 16 с Google Play после установки APK 1.6 выполнено штатное сканирование Play Protect. Показано «No harmful apps found», СайтКонтроль присутствует в списке проверенных приложений. [Снимок результата](docs/images/play-protect-v1.6.png). Этот результат не означает одобрения Google Play и не гарантирует отсутствия предупреждений на других устройствах. Не отключайте защиту ради установки.
 
 ## Установка и обновление
 
-Минимальная версия Android: 6.0, API 23. Версия приложения: 1.5, versionCode: 6.
+Минимальная версия Android: 6.0, API 23. Версия приложения: 1.6, versionCode: 7. Целевой API: 36.
 
 APK подписан ключом выпуска. Для обновления уже установленного экземпляра требуется та же подпись. Если прежний APK был собран другим ключом, Android откажет в установке поверх него. Не удаляйте прежнюю установку до сохранения списка сайтов; при удалении локальные данные теряются.
 
@@ -40,16 +46,16 @@ APK подписан ключом выпуска. Для обновления у
 Для macOS и Linux:
 
 ```sh
-./gradlew --no-daemon --dependency-verification strict testDebugUnitTest assembleDebug assembleRelease lintDebug lintRelease
+./gradlew --no-daemon --dependency-verification strict testDebugUnitTest assembleDebug assembleRelease bundleRelease lintDebug lintRelease
 ```
 
 Для Windows:
 
 ```bat
-gradlew.bat --no-daemon --dependency-verification strict testDebugUnitTest assembleDebug assembleRelease lintDebug lintRelease
+gradlew.bat --no-daemon --dependency-verification strict testDebugUnitTest assembleDebug assembleRelease bundleRelease lintDebug lintRelease
 ```
 
-Результаты: app/build/outputs/apk/debug/app-debug.apk и app/build/outputs/apk/release/app-release-unsigned.apk. Второй файл нужно подписать собственным ключом перед установкой. APK из раздела Releases уже подписан.
+Результаты: app/build/outputs/apk/debug/app-debug.apk, app/build/outputs/apk/release/app-release-unsigned.apk и app/build/outputs/bundle/release/app-release.aab. Файлы release по умолчанию не подписаны. Скрипт tools/sign_release.py подписывает APK или AAB с паролем из локального файла. Ключи и пароли не входят в репозиторий. APK из раздела Releases уже подписан. AAB предназначен для загрузки в Google Play и не устанавливается напрямую.
 
 Применяется Android Gradle Plugin 9.5.0. Сборка использует Gradle 9.8.2 с заменой встроенной Guava на исправленную 33.7.2-jre. Это измененный комплект инструментов для проекта. Официальный Gradle Wrapper не изменен; его JAR и архив инструментов закреплены контрольными суммами.
 
@@ -57,7 +63,7 @@ gradlew.bat --no-daemon --dependency-verification strict testDebugUnitTest assem
 
 ## Проверки
 
-В проекте 16 автоматических тестов правил адресов и сетевых запросов. Отдельный сценарий tools/emulator_smoke.py проверяет подписанный APK на изолированном эмуляторе: обновление с исходников 1.3, сохранение шести сайтов и интервала, согласие на HTTP, ошибки, уведомление без секретов и принудительный запуск фоновой задачи.
+В проекте 16 автоматических тестов правил адресов и сетевых запросов. Отдельный сценарий tools/emulator_smoke.py проверяет подписанный APK на изолированном эмуляторе: обновление с исходников 1.3, сохранение шести сайтов и интервала, согласие на HTTP, ошибки, уведомление без секретов, принудительный запуск фоновой задачи, отступы API 36 и доступность политики конфиденциальности. Для версии 1.6 прошли 11 групп проверок. Дополнительно APK из AAB проверяется на отдельном образе Google Play.
 
 Сценарий сбрасывает только тестовую установку СайтКонтроля на эмуляторе и требует явного флага --reset-test-app. Он отказывается работать с физическим устройством. Адреса и секреты в проверках синтетические.
 

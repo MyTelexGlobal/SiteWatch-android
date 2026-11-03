@@ -35,3 +35,10 @@ python3 tools/security_audit.py --gradle-zip .toolchain-cache/gradle-9.8.2-sitew
 - [Уведомление Guava](https://github.com/google/guava/security/advisories/GHSA-xxph-c9ww-hj94).
 - [Kotlin 2.4.20](https://github.com/JetBrains/kotlin/releases/tag/v2.4.20).
 - [Метод проверки OSV](https://google.github.io/osv.dev/post-v1-querybatch/).
+
+
+## Проверка AAB версии 1.6
+
+Официальный bundletool 1.18.3 запускается из уже закрепленного набора зависимостей AGP через tools/bundletool.gradle. Это сохраняет исправленные версии Guava и других библиотек. Самостоятельный bundletool-all JAR со встроенными более старыми библиотеками не применяется в итоговой проверке и не распространяется с выпуском.
+
+Параметры задаются массивом строк в локальном JSON-файле. Например: ["validate", "--bundle=deliverables/SiteWatch-v1.6.aab"]. Запуск: ./gradlew --dependency-verification strict -I tools/bundletool.gradle -PbundletoolArgsFile=/absolute/path/arguments.json sitewatchBundletool. Пароли в аргументы не передаются; для подписи применяется ссылка на локальный файл пароля.
