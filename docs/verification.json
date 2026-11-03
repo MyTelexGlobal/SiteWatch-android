@@ -1,11 +1,11 @@
 {
   "date": "2026-11-03",
-  "version": "1.6",
-  "version_code": 7,
+  "version": "1.6.1",
+  "version_code": 8,
   "target_sdk": 36,
-  "apk_source_commit": "d4d53b18218d3ece42a242bcbfe455f8a5ab0c0d",
-  "apk_sha256": "72782ba0ddbd4a52558b85553adf36209b94c00a16ad6803b0027d825c87fb4d",
-  "aab_sha256": "efd2e4408fab99910a0f4b1f586632f99fda86425bb9b7457d94762a72e69c08",
+  "apk_source_commit": "772238fe7a82866de5470c79de646e1d4a98d70e",
+  "apk_sha256": "921a664797832a0971bda867994e546241e7004e3c65035cb4b1e6546ed803c6",
+  "aab_sha256": "1f048b2ccbbd3a38a307249502233a9f7c87274c5239df90d3b2b413b53d0c23",
   "certificate_sha256": "d0ec938d2f94601baf545510183ff5769b68c57929cfd16023aa8b0277908537",
   "unit_tests_passed": 16,
   "lint": {
@@ -16,64 +16,8 @@
       "Warning": 24
     }
   },
-  "emulator": {
-    "android": "16",
-    "api": "36",
-    "apk_sha256": "72782ba0ddbd4a52558b85553adf36209b94c00a16ad6803b0027d825c87fb4d",
-    "checks": [
-      {
-        "name": "baseline_1_3_six_sites_and_http_results",
-        "status": "PASS"
-      },
-      {
-        "name": "upgrade_preserves_six_sites_and_interval_http_default_off",
-        "status": "PASS"
-      },
-      {
-        "name": "http_consent_codes_and_redirect_policy_on_android",
-        "status": "PASS"
-      },
-      {
-        "name": "duplicate_and_credential_urls_rejected",
-        "status": "PASS"
-      },
-      {
-        "name": "recovery_notification_hides_path_and_secret",
-        "status": "PASS"
-      },
-      {
-        "name": "public_https_with_system_certificate_validation",
-        "status": "PASS"
-      },
-      {
-        "name": "background_workmanager_job_runs_with_activity_hidden",
-        "status": "PASS",
-        "job_id": "10",
-        "namespace": "androidx.work.systemjobscheduler",
-        "forced": true,
-        "guest_clock_advance_seconds": 960
-      },
-      {
-        "name": "restart_persistence_and_site_removal",
-        "status": "PASS"
-      },
-      {
-        "name": "api36_system_bar_controls_have_safe_insets",
-        "status": "PASS"
-      },
-      {
-        "name": "privacy_policy_accessible_in_app",
-        "status": "PASS"
-      },
-      {
-        "name": "no_sitewatch_crash_in_android_runtime_log",
-        "status": "PASS"
-      }
-    ],
-    "result": "PASS"
-  },
   "play_protect": {
-    "apk_sha256": "72782ba0ddbd4a52558b85553adf36209b94c00a16ad6803b0027d825c87fb4d",
+    "apk_sha256": "921a664797832a0971bda867994e546241e7004e3c65035cb4b1e6546ed803c6",
     "scope": "One explicit Play Protect device scan on a Google Play emulator",
     "google_play_approval": false,
     "warning_removal_on_other_devices_proven": false,
@@ -90,7 +34,7 @@
         "Photos",
         "YouTube Music",
         "+13\nmore",
-        "Apps scanned 1 minute ago",
+        "Apps scanned 7 minutes ago",
         "Play Protect regularly checks your apps and device for harmful behavior. You'll be notified of any security risks found.",
         "Learn more",
         "Play Protect",
@@ -122,7 +66,7 @@
       ]
     ],
     "result": "PASS",
-    "installed_version": "versionName=1.6",
+    "installed_version": "versionName=1.6.1",
     "message": "No harmful apps found",
     "sitewatch_in_recently_scanned_apps": true
   },
@@ -136,8 +80,8 @@
   "aab_installation": {
     "result": "PASS",
     "source": "Signed AAB transformed by bundletool with pinned AGP dependencies",
-    "aab_sha256": "efd2e4408fab99910a0f4b1f586632f99fda86425bb9b7457d94762a72e69c08",
-    "generated_apk_sha256": "a36a4e26dcd70f976966cf40ff52b1addf8288635d93a3b6de379364c12b47a5",
+    "aab_sha256": "1f048b2ccbbd3a38a307249502233a9f7c87274c5239df90d3b2b413b53d0c23",
+    "generated_apk_sha256": "63414273120e0baefa64af4477786753145a65250b3071e1bb0d8ff30bf0b979",
     "installed_and_launched": true,
     "https_check": true,
     "settings_and_privacy_accessible": true,
@@ -147,11 +91,70 @@
     ],
     "google_play_review": false
   },
-  "guest_clock_restored": true,
-  "guest_adb_root_restored": true,
   "osv_coordinates_checked": 279,
   "external_gradle_jars": 125,
   "unmapped_external_gradle_jars": 0,
   "osv_matches": 0,
-  "upload_certificate_sha256": "d72497a79402fd9216b7d9f3a95a0bcbfc90faf30a44b9702cbfa45d2ff4ed02"
+  "upload_certificate_sha256": "d72497a79402fd9216b7d9f3a95a0bcbfc90faf30a44b9702cbfa45d2ff4ed02",
+  "unused_foreground_permission_removed": true,
+  "unused_foreground_service_removed": true,
+  "emulator": {
+    "android": "16",
+    "api": "36",
+    "apk_sha256": "921a664797832a0971bda867994e546241e7004e3c65035cb4b1e6546ed803c6",
+    "checks": [
+      {
+        "name": "baseline_1_3_six_sites_and_http_results",
+        "status": "PASS"
+      },
+      {
+        "name": "upgrade_preserves_six_sites_and_interval_http_default_off",
+        "status": "PASS"
+      },
+      {
+        "name": "http_consent_codes_and_redirect_policy_on_android",
+        "status": "PASS"
+      },
+      {
+        "name": "duplicate_and_credential_urls_rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "recovery_notification_hides_path_and_secret",
+        "status": "PASS"
+      },
+      {
+        "name": "public_https_with_system_certificate_validation",
+        "status": "PASS"
+      },
+      {
+        "name": "background_workmanager_job_runs_with_activity_hidden",
+        "status": "PASS",
+        "job_id": "9",
+        "namespace": "androidx.work.systemjobscheduler",
+        "forced": true,
+        "guest_clock_advance_seconds": 960
+      },
+      {
+        "name": "restart_persistence_and_site_removal",
+        "status": "PASS"
+      },
+      {
+        "name": "api36_system_bar_controls_have_safe_insets",
+        "status": "PASS"
+      },
+      {
+        "name": "privacy_policy_accessible_in_app",
+        "status": "PASS"
+      },
+      {
+        "name": "no_sitewatch_crash_in_android_runtime_log",
+        "status": "PASS"
+      }
+    ],
+    "result": "PASS"
+  },
+  "guest_clock_restored": true,
+  "guest_adb_root_restored": true,
+  "google_play_account_status": "Identity documents submitted; Google review pending; phone verification follows identity approval; Create app disabled"
 }

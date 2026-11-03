@@ -1,7 +1,7 @@
 {
   "status": "draft_not_submitted_to_google",
   "app_id": "ru.sitewatch.monitor",
-  "version": "1.6",
+  "version": "1.6.1",
   "local_storage": [
     "full user-entered URLs",
     "last status, HTTP code, check time and latency",

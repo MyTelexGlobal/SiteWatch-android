@@ -69,7 +69,7 @@ d0ec938d2f94601baf545510183ff5769b68c57929cfd16023aa8b0277908537
 
 Финальный тег также содержит отчеты и дополнительные суммы AAPT2 для Linux и Windows. Код приложения в нем совпадает с исходным коммитом APK. Контрольные суммы установочного файла и архива инструментов опубликованы в выпуске.
 
-[Машиночитаемые результаты](verification.json) · [Перечень проверенных зависимостей](security-inventory.json).
+[Машиночитаемые результаты](https://github.com/MyTelexGlobal/SiteWatch-android/blob/v1.5.0/docs/verification.json) · [Перечень проверенных зависимостей](https://github.com/MyTelexGlobal/SiteWatch-android/blob/v1.5.0/docs/security-inventory.json).
 
 ## Что не проверено и ограничения
 
